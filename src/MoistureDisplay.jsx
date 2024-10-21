@@ -12,7 +12,7 @@ const MoistureDisplay = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://192.168.0.173:80/data");
+        const response = await fetch("http://152.58.179.185:80/data");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -36,7 +36,7 @@ const MoistureDisplay = () => {
 
   const handleRelayToggle = async () => {
     try {
-      const response = await fetch('http://192.168.0.173:80/relay', {
+      const response = await fetch('http://152.58.179.185:80/relay', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       });
